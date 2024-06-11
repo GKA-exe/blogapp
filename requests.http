@@ -1,0 +1,21 @@
+### user registration
+POST http://localhost:4000/user-api/register
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"krishna",
+    "password":"krishna",
+    "email":"krishna@gmail.com"
+}
+
+###author registration
+POST http://localhost:4000/author-api/register
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"anirudh",
+    "password":"anirudh",
+    "email":"anirudh@gmail.com"
+}
