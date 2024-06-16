@@ -4,9 +4,19 @@ Content-Type: application/json
 
 {
     "usertype":"user",
-    "username":"krishna",
+    "username":"Kitta",
     "password":"krishna",
     "email":"krishna@gmail.com"
+}
+
+### user Login
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"Kitta",
+    "password":"krishna"
 }
 
 ###author registration
@@ -15,7 +25,35 @@ Content-Type: application/json
 
 {
     "usertype":"author",
-    "username":"anirudh",
-    "password":"anirudh",
+    "username":"Nalla",
+    "password":"NallaReddy",
     "email":"anirudh@gmail.com"
+}
+
+### Author Login
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"Nalla",
+    "password":"NallaReddy"
+}
+
+
+### add a new article:
+
+POST http://localhost:4000/author-api/new-article
+Content-Type: application/json
+
+{
+    "article": "{{$timestamp}}",
+    "title": "Fundamentals of JS",
+    "category": "Programming",
+    "content": "foiurwhfv;ioeruvnrliuvb iufeliuvn liwu b iubli ubfiubwf iubffiyub4wiyfbiy i ybib wib wifbw4ifbrib",
+    "dateOfCreation": "{{$datetime iso8601}}",
+    "dateOfModification": "{{$datetime iso8601}}",
+    "username": "Nalla",
+    "comments": [],
+    "status": true
 }
