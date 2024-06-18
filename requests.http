@@ -57,3 +57,25 @@ Content-Type: application/json
     "comments": [],
     "status": true
 }
+
+### read articles by author's username
+
+GET http://localhost:4000/author-api/articles/Nalla
+
+
+### Edit Articles
+
+PUT http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "article": "1718681503",
+    "title": "Fundamentals of JS",
+    "category": "Programming",
+    "content": "foiurwhfv;ioeruvnrliuvb iufeliuvn liwu b iubli ubfiubwf iubffiyub4wiyfbiy i ybib wib wifbw4ifbrib",
+    "dateOfCreation": "2024-06-18T03:31:43.595Z",
+    "dateOfModification": "{{$datetime iso8601}}",
+    "username": "Nalla",
+    "comments": [],
+    "status": true
+}

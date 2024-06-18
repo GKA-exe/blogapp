@@ -15,10 +15,12 @@ mongoClient.connect(URL)
         // create collection objects
         const usersCollection = blogdbObj.collection('users')
         const authorsCollection = blogdbObj.collection('authors')
+        const articlesCollection = blogdbObj.collection('articles')
 
         // share them to the apis
         app.set("usersCollection", usersCollection);
         app.set("authorsCollection", authorsCollection);
+        app.set("articlesCollection", articlesCollection);
         console.log("Database Connected...")
     })
     .catch(err => {
