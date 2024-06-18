@@ -42,5 +42,18 @@ authorApp.put("/article", expressAsyncHandler(async (req, res) => {
     res.send({message: "Article Modified"})
 }))
 
+// Delete Article (soft delete)
+authorApp.put('/article/:articleId', expressAsyncHandler(async (req, res) => {
+    let articleid = req.params.articleId;
+    let modifiedArticle = req.body;
+    
+    await articlesCollection.updateOne(
+      { articleid: articleid },
+      { $set: { ...modifiedArticle } }
+    );
+    // send res
+    res.send({ message: "Article Deleted" });
+}))
+
 
 module.exports = authorApp;
